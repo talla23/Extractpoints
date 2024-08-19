@@ -1,0 +1,13 @@
+Description: Example 1
+INPUT
+{
+  message: {
+  battery: 92,
+  button_1: 'trigger'
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 92 }
+}

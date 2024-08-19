@@ -1,0 +1,23 @@
+Description: Example 1
+INPUT
+{
+  message: {
+  voltage: 25.6,
+  power: 16,
+  factor: 92,
+  power_sum: 17,
+  current: 16,
+  state: 'open',
+  outage: 1
+}
+}
+
+OUTPUT
+{
+  voltage: { unitId: 'V', record: 25.6 },
+  power: { unitId: 'W', record: 16 },
+  current: { unitId: 'mA', record: 16 },
+  energy: { unitId: 'Wh', record: 17 },
+  powerFactor: { unitId: '/', record: 0.92, nature: 'Power factor' },
+  status: { unitId: 'state', record: true, nature: 'Open operational status' }
+}

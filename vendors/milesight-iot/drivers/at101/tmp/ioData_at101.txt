@@ -1,0 +1,76 @@
+Description: AT101: Example 1
+INPUT
+{
+  message: {
+  battery: 100,
+  geofence_status: 'unset',
+  latitude: 24.62495,
+  longitude: 118.030576,
+  motion_status: 'moving',
+  position: 'normal',
+  temperature: 28.3
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 100 },
+  temperature: { unitId: 'Cel', record: 28.3 },
+  location: { unitId: 'GPS', record: [118.030576,24.62495] }
+}
+
+---------------------------------
+
+Description: AT101: Example 2
+INPUT
+{
+  message: {
+  battery: 100,
+  motion_status: 'moving',
+  position: 'tilt',
+  temperature: 28.3,
+  wifi: [
+    {
+      group: 8,
+      mac: '1c:c3:16:22:2d:f9',
+      rssi: -61
+    },
+    {
+      group: 8,
+      mac: '24:e1:24:f6:a6:67',
+      rssi: -74
+    },
+    {
+      group: 8,
+      mac: '24:e1:24:f5:4d:e3',
+      rssi: -68
+    },
+    {
+      group: 8,
+      mac: '24:e1:24:f5:79:71',
+      rssi: -78
+    },
+    {
+      group: 8,
+      mac: '24:e1:24:f3:19:a8',
+      rssi: -56
+    }
+  ]
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 100 },
+  temperature: { unitId: 'Cel', record: 28.3 },
+  'rssi:0': { unitId: 'dBm', record: -61 },
+  'mac:0': { unitId: 'IEEE-802', record: "1c:c3:16:22:2d:f9", nature: 'WIFI' },
+  'rssi:1': { unitId: 'dBm', record: -74 },
+  'mac:1': { unitId: 'IEEE-802', record: "24:e1:24:f6:a6:67", nature: 'WIFI' },
+  'rssi:2': { unitId: 'dBm', record: -68 },
+  'mac:2': { unitId: 'IEEE-802', record: "24:e1:24:f5:4d:e3", nature: 'WIFI' },
+  'rssi:3': { unitId: 'dBm', record: -78 },
+  'mac:3': { unitId: 'IEEE-802', record: "24:e1:24:f5:79:71", nature: 'WIFI' },
+  'rssi:4': { unitId: 'dBm', record: -56 },
+  'mac:4': { unitId: 'IEEE-802', record: "24:e1:24:f3:19:a8", nature: 'WIFI' }
+}

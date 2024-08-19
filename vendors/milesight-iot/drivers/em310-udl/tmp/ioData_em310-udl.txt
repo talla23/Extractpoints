@@ -1,0 +1,15 @@
+Description: Example 1
+INPUT
+{
+  message: {
+  battery: 92,
+  distance: 2116,
+  position: 'tilt'
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 92 },
+  distance: { unitId: 'mm', record: 2116 }
+}

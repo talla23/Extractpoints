@@ -1,0 +1,13 @@
+Description: Example 1
+INPUT
+{
+  message: {
+  battery: 16,
+  press: 'short'
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 16 }
+}

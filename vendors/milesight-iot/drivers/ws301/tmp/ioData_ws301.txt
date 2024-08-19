@@ -1,0 +1,14 @@
+Description: Example 1
+INPUT
+{
+  message: {
+  battery: 100,
+  state: 'open',
+  install: 'no'
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 100 }
+}

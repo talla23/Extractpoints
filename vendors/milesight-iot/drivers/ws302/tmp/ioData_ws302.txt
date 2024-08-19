@@ -1,0 +1,21 @@
+Description: Example 1
+INPUT
+{
+  message: {
+  battery: 92,
+  freq_weight: 'Z',
+  time_weight: 'impulse',
+  la: 102.4,
+  laeq: 76.8,
+  lamax: 51.2,
+  class_type: 'class-a'
+}
+}
+
+OUTPUT
+{
+  batteryLevel: { unitId: '%', record: 92 },
+  'snr:0': { unitId: 'dB', record: 102.4, nature: 'A-weighted sound level (la)' },
+  'snr:1': { unitId: 'dB', record: 76.8, nature: 'Equivalent continuous sound level (laeq)' },
+  'snr:2': { unitId: 'dB', record: 51.2, nature: 'Maximum sound pressure level (lamax)' }
+}
